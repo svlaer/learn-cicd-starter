@@ -26,11 +26,6 @@ func TestGetAPIKey(t *testing.T) {
 			want:    "",
 			wantErr: true,
 		},
-		"Forced failure": {
-			headers: makeHeaders(map[string]string{"Authorization": "Nope"}),
-			want:    "Value that can never exist",
-			wantErr: false,
-		},
 	}
 
 	for name, tc := range tests {
